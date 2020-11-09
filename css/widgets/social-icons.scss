@@ -1,0 +1,15 @@
+.social-icons {
+	white-space: nowrap;
+
+	a { width: 3rem; height: 3rem; display: inline-block; border-radius: 50%; background-color: $color-yellow;  background-position: center; background-size: auto; background-repeat: no-repeat; margin-right: 0.4rem; position: relative; display: inline-flex; justify-content: center; align-items: center; transition: .3s all; }
+	a:hover { background: $color-black; }
+	a:hover:after { filter: invert(100%); transition: .3s all; }
+
+
+	a:after { content: ''; display: inline-block; width: 1.5rem; height: 1.5rem; background-size: contain; background-repeat: no-repeat; background-position: center; opacity: 1; }
+
+	a.vk:after { background-image: url(../img/icon-social-vk.svg); }
+	a.twitter:after { background-image: url(../img/icon-social-twitter.svg); }
+	a.instagram:after { background-image: url(../img/icon-social-instagram.svg); }
+	a.facebook:after { background-image: url(../img/icon-social-facebook.svg); }
+}

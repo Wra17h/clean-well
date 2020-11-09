@@ -1,0 +1,10 @@
+.b_crumb {
+	.B_crumbBox { display: flex; background: url(../img/icons/b_crumb.png) no-repeat; padding-left: 6rem; min-height: 4rem; align-items: center; 
+		a { text-decoration: underline; text-decoration-color: $color-blue; }
+		a:hover { text-decoration: none; }
+		.separator { color: black; margin: 0 1rem; }
+		.B_currentCrumb { text-decoration: none; 
+			span { color: $color-black; }
+		}
+	}
+}

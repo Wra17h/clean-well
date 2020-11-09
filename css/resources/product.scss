@@ -1,0 +1,165 @@
+.product-cart {
+
+	border: 1px solid #dfdfdf; border-bottom-width: 5px; text-align: left;
+	font-size: 1.4rem; position: relative; top:0; transition: 0.2s all; display: flex;
+	min-height: 200px;
+
+	.cover {
+		width: 20%;  min-width: 200px; position: relative;
+		img { position: absolute; top: 0; left: 0; bottom:0; right:0; object-fit: cover; width: 100%; height: 100%; }
+		a { display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
+	}
+
+	.info {
+		padding: 2rem; display: flex; flex-flow: column; justify-content: center; align-items: flex-start;
+		padding-left: 4rem;
+		.title {font-size: 2rem;  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin: -1rem; margin-bottom: 1rem; margin-top: 0;}
+		.title > * { margin: 1rem; }
+		.title .price strong { font-weight: normal;  }
+		.description {margin-bottom: 1rem;}
+	}
+
+	.cover:after {
+		@include null; position: absolute; top:50%; right: -10px; margin-top: -10px; transition: 0.2s all;
+		width: 0; height: 0; border-style: solid; border-width: 15px 10px 15px 0; border-color: transparent #ffffff transparent  transparent;
+	}
+
+	&:hover {
+		.cover:after { right: 0px; }
+		.add-button:before { background-color: $color-yellow; background-image: url(../img/icon-plus-white.svg); }
+	}
+
+	.delete-button { border-radius: 99rem; background: #eee; padding: 0.5rem 1rem; position: absolute; right: 2rem; top: 2.5rem;
+		cursor: pointer; transition: 0.2s all;
+	}
+
+	.delete-button:hover { background-color: $color-black; color: white; }
+}
+
+
+.vcart { display: block;
+	margin-bottom: 2rem;
+	.product-cart {  width: 100%; margin-bottom: 1rem;}
+	.products-container { display: block; }
+	.total {
+		margin-top: 2rem; font-size: 2.2rem;
+	}
+}
+
+
+.products-container {
+
+	@media screen and (max-width: 640px) {
+		display: flex; grid-gap: 2rem; flex-wrap: wrap;
+	}
+}
+
+.product-preview {
+
+	font-size: 1.4rem; position: relative; top:0; transition: 0.2s all; overflow: hidden; margin-bottom: 4rem; transition: 0.5s border-color; display: flex; align-items: center; justify-content: space-between;
+
+	.v-cart-controls { display: none; margin-bottom:0;}
+	.v-cart-controls input { padding:1.2rem 2rem; }
+	.v-cart-controls input[type="submit"] { display: none; }
+
+	&.in-cart {
+		.v-cart-controls { display: block;}
+		.add-button { display: none; }
+	}
+
+	.cover { width: 300px; min-width: 300px; position: relative;
+		img { width: 100%; height: auto;  max-height: 120px; object-fit: contain; display: inline-block; margin-bottom: 0; }
+		a { display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; } }
+
+	.info { padding: 1rem; align-items: center; justify-content: center; margin-bottom: 1rem; width: 100%;}
+	.cart { width: 125px; min-width: 125px;}
+	.title { margin-bottom: 0.5rem;
+		a { color: $color-yellow; font-size: 1.8rem; } }
+
+	.price { display: flex; align-items: center; justify-content: center; font-size: 1.7rem;
+		strong { font-size: 1.9em;  font-weight: bold; margin-right: 0.5rem; color: $color-yellow; } }
+
+	.add-button {	@include ui-button; cursor: pointer; width: 100% }
+
+	&:hover {
+		.add-button:before { background-image: url(../img/icon-plus-white.svg); }
+		.add-button { background-color: $color-black; color: white; text-decoration: none;}
+	}
+
+	@media screen and (max-width: 640px) {
+		flex-wrap: wrap; justify-content: center; display: inline-block; width: 48%; min-width: 220px; text-align: center;
+		position: relative; flex-grow: 1; border: 1px solid #eee; padding: 1rem; margin-bottom: 0;
+		.cover { width: 100%; min-width: auto; padding-top: 35%; position: relative; }
+		.cover img { display: block; position: absolute; height: 100%; width: 100%; object-fit: contain; top:50%; bottom:0; left:50%; right:0; transform: translate(-50%, -50%); }
+		.cart { width: 100%; }
+		.info { width: auto; }
+		.add-button { max-width: 150px;}
+	}
+
+}
+
+
+.product .side .v-rating {  border: none; justify-content: center; display: flex;}
+
+
+.cart-controls {
+	display: flex; flex-wrap: nowrap; margin-bottom: 1rem; position: relative;
+	input[type="text"] { width: 100%; text-align: center !important; }
+	.number-input { position: relative; width: 100%; }
+	.plus,.minus { top:0; position: absolute; width: 2rem; height: 100%; cursor: pointer; font-size: 2rem; color: #888; display: flex; align-content: center; align-items: center; text-align: center; justify-content: center;}
+	.plus { right: 5px; }
+	.minus { left: 5px; }
+}
+
+.v-cart-controls {
+	& > * { margin-bottom: 0.5rem; }
+
+	.buy-with-click { width: 100%;}
+	.buttons { display: flex; justify-content: center; align-items: center; }
+	.buttons a { display: inline-block;  margin: 1rem; }
+}
+
+.order-form {
+	max-width: 600px; box-shadow: 0 0 5px 0 rgba(0,0,0,0.3); padding: 4rem; text-align: center;
+	margin: 0 auto; margin-bottom: 2rem;
+	h2 { font-weight: normal; margin-bottom: 2rem; }
+}
+
+#article { overflow: hidden;}
+article.product {
+	position: relative;
+	.overview {
+		display: flex; flex-wrap: wrap;  margin: -1rem; margin-bottom: 2rem;
+		& > * { width: 33%; padding: 1rem; }
+		.price {
+			white-space: nowrap; display: flex; align-items: center; margin-bottom: 1rem;
+			strong { font-size: 2.8rem; font-weight: normal;  margin-right: 0.5rem; }
+		}
+		img { margin-bottom: 0;}
+		.side { min-width: 220px; flex-grow: 1; }
+		.specs  {
+			margin-bottom: 1rem;
+			color: rgba(0,0,0,0.5);
+			strong { font-weight: normal; color: rgba(0,0,0,0.8); }
+
+		}
+	}
+
+	.gallery { overflow: hidden; max-width: 33%; position: relative;}
+	.thumbnails {
+		display: block; max-width: 100%;  min-height: 150px; position: relative;
+		.slick-list {  }
+		.slick-track {height: 100%; padding: 0.5rem;}
+		.slick-slide { width: auto !important;  display: block; float: left;}
+		.slick-dots { z-index: 100; }
+		.image { border: 3px solid white; margin: 0.5rem; box-shadow: 0 0 3px 0 rgba(0,0,0,0.3); height: 150px; }
+		img { height: 100%; width: auto; }
+
+		a {display: block; height: 100%;}
+	}
+
+
+
+	.description { border-bottom: 1px solid #ccc; padding-bottom: 3rem; margin-bottom: 3rem;}
+
+}

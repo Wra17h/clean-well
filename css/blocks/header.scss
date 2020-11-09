@@ -1,0 +1,59 @@
+#header {
+	@include section(2rem);
+	background: url(../img/header-bg.png) repeat-x, linear-gradient(180deg, #cde1f6 0, #fff 50%);
+
+	& > .container { display: flex; flex-flow: row wrap; justify-content: space-between; }
+	/*{ display: grid; grid-template-columns: 1fr 2fr 22rem 1fr; grid-gap: 2rem; }*/
+
+	.site-logo { background: url(../img/site-logo.png) no-repeat; background-size: contain; width: 32rem; height: 12.5rem; position: relative;
+	
+		a { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+	}
+
+	& .phones { display: flex; flex-direction: column; font-size: 2.6rem; justify-content: flex-end; width: 21rem;}
+
+	.order-button, .callback-button { padding-left: 4rem; position: relative; height: 4.2rem; width: 19.6rem; justify-content: center; align-items: center; display: flex; font-size: 1.4rem; box-shadow: 0 .2rem 0 0 rgba(0,190,248,0.55); border-radius: $border-radius; background: linear-gradient(135deg,rgba(255,255,255,1) 80%, rgba(103,211,250,0.3) 100%); }
+	
+	.callback-button { margin-bottom: 1rem; }	
+	
+	.callback-button::before { content: ""; position: absolute; background: url(../img/icons/icon-callback.png) no-repeat; display: block; height: 2.7rem; width: 2.4rem; @include colorize(lightblue); left: 13%; }
+	
+	.order-button::before { content: ""; position: absolute; background: url(../img/icons/icon-contact-us-2.png) no-repeat; display: block; height: 2.6rem; width: 2.3rem; @include colorize(lightblue); left: 12%; }
+	
+	.buttons { display: flex; flex-grow: 0.5; align-items: flex-end; flex-direction: column; justify-content: flex-end; }
+	
+	.slogan { display: flex; flex-direction: column; justify-content: flex-end; width: 28rem;
+		& p { margin-bottom: 0; }
+		.clean-well-slogan { margin-bottom: 1.5rem; font-size: 2.2rem; line-height: 0.9; }
+		.well-count { font-size: 1.3rem; color: $color-dark-gray; }
+	}
+
+	
+	@media screen and (max-width: 1280px) {
+		.container { gap: 1rem; }
+		.phones { flex-direction: row; width: 100%; justify-content: space-around; margin-top: 1rem; }
+	}
+
+	@media screen and (max-width: 1024px) {
+		.container { column-gap: 3rem; row-gap: 2rem; justify-content: center; }
+		.buttons { flex-grow: 0; margin-left: 4.4rem; }
+		.phones { width: 21rem; justify-content: flex-end; flex-direction: column; }
+
+	}
+
+	@media screen and (max-width: 669px) {
+		.slogan { display: none; }
+	}
+
+	@media screen and (max-width: 640px) {
+		.buttons { margin-left: 0; }
+
+	}
+
+	@media screen and (max-width: 480px) {
+		.container { column-gap: 4rem; }
+		.buttons { order: 1; margin-left: 0; }
+
+	}
+
+}

@@ -1,0 +1,26 @@
+.message-box  {
+	background: white; position: relative; border: 2px solid #01c2f4; display: flex; justify-content: flex-start; align-items: flex-start; padding: 2rem 4rem; padding-left: 16rem ; text-align: left; margin: 2rem 0; flex-flow: column; border-radius: $border-radius; min-height: 14rem; justify-content: center;
+
+	a { display: contents; }
+
+	h2 { text-align: left; font-size: 2.4rem; margin-bottom: 1rem; margin-top: 0; }
+	
+	& > *:last-child { padding-bottom: 0; }
+	
+	.text { overflow: hidden; }
+	
+	&:before { content: ''; display: block; position: absolute; top: 0; bottom: 0; left: 0; width: 14rem;	background: url("../img/message-box/message-box.png") center no-repeat; }
+	
+	&:after { content: ''; display: block; position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 12rem; height: 12rem;  background: radial-gradient(ellipse at center, rgba(56,180,225,0.4) 0%, rgba(255,255,255,0) 60%); 
+	}
+
+	@media screen and (max-width: 480px) {
+		padding-left: 2.2rem;
+		&::after, &::before { display: none; }
+	}
+}
+
+// .message-box.home:before { background-image: url(../img/icon-message-box-home.png); }
+// .message-box.alert {  }
+// .message-box.alert:before { background-image: url(../img/icon-message-box-alert.png);  }
+// .message-box.percent:before { background-image: url(../img/icon-message-box-percent.png); }

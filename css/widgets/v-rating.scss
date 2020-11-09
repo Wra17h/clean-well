@@ -1,0 +1,8 @@
+.v-rating {
+	display: inline-flex; align-items: center; justify-content: flex-start; overflow: hidden;
+	.title { display: inline-block; margin-right: 0.5rem; }
+	.values { display: inline-block; white-space: nowrap;}
+	.values span { display: inline-block; width: 2rem; height:2rem; background: url(../img/icon-rating.png) center no-repeat; margin: 0.2rem; cursor: pointer; }
+
+	.values span.active { display: inline-block; width: 2rem; height:2rem; background: url(../img/icon-rating-active.png); }
+}

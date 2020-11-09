@@ -1,0 +1,12 @@
+#slider {
+	@include section(2rem);
+
+    .slick-track { display: flex; }
+
+	.slide img { border-radius: $border-radius; }
+
+	@media screen and (max-width: 480px) {
+		display: none;
+	}
+}
+

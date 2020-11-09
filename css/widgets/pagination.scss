@@ -1,0 +1,11 @@
+.pagination {
+	display: flex; margin: 4rem; text-align: center; align-items: center; justify-content: center; flex-wrap: wrap;
+
+	li a { display: inline-flex; margin: 0.5rem 0.5rem; }
+	li.active a { background: $color-dark-gray; color: $color-white; }
+	li { display: inline-flex; list-style-type: none;  }
+	li:not(.control) a { border-radius: 50%; min-width: 30px; width: 30px; height: 30px; align-items: center; justify-content: center; text-decoration: none; }
+
+	li:hover:not(.active) a { background: $color-light-gray;  }
+
+}

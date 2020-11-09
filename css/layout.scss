@@ -1,0 +1,51 @@
+* { box-sizing: border-box; vertical-align: top; }
+html { height: 100%; font-size: 10px; }
+
+// Body
+// ---------------------------------------------------------------------------------
+body { width: 100%; min-height: 100%; vertical-align: top;	font-size: 1.5rem; font-family: "Arial", "Roboto", "Verdana", sans-serif;; color: $color-black; }
+body > .container { overflow: hidden; }
+
+// Main elements
+// ---------------------------------------------------------------------------------
+img { display: inline-block; max-width: 100%; height: auto; }
+a { text-decoration: none; color: inherit; }
+em { font-weight: bold; }
+strong { font-weight: normal; }
+hr { display: block; border: none; border-bottom: 1px solid #ccc; margin: $span-small 0; }
+
+// Headings
+// ---------------------------------------------------------------------------------
+h1, h2, h3, h4 { margin-bottom: 1rem;  line-height: 120%; }
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.4rem; color: $color-blue; text-transform: uppercase;}
+h3 { font-size: 1.9rem; color: $color-blue;}
+
+p { margin-bottom: 0.5em; }
+strong {font-weight: bold; }
+
+@mixin index-heading { display: block; margin-left: auto; margin-right:auto; font-size: 3.6rem; text-align: center; max-width: 700px; }
+
+@mixin index-heading-decor {
+	@include index-heading; position: relative; padding-top: 3rem;
+	&:before { @include null; width: 150px; height: 3rem; background: url(../img/heading-decor.svg) no-repeat center / contain; position: absolute; top:0; left:50%;
+	transform: translateX(-50%); }
+}
+
+
+// Lists
+// ---------------------------------------------------------------------------------
+ol > li, ul > li { margin:0; list-style-type: none; }
+//ul { margin-bottom: 1.5rem; }
+
+
+// Icons
+// ---------------------------------------------------------------------------------
+i { display: inline-block;  background-repeat: no-repeat; background-position: center; width: 2rem; height: 2rem; background-size: contain; }
+
+// Generic
+// ---------------------------------------------------------------------------------
+.hidden { display: none !important; }
+.clearfix { clear: both; }
+
+

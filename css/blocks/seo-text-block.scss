@@ -1,0 +1,33 @@
+#seo-text-1 {
+	@include section(4rem);
+
+	position: relative;
+
+	min-height: 420px;
+	background: url(../img/drill-well-bg.png) no-repeat left center, url(../img/drill-well-bg-2.png) no-repeat center right, #ededed ;
+
+	& .count { display: flex; & > p { width: 100%; } }
+
+	text-align: right;
+	& > .container { position: relative;
+		&::before { content: '';
+			position: absolute; left: -70px; background: url(../img/drill-well-man.png) left center no-repeat; top: 10px; bottom: 0px; width: 370px; height: 466px;
+		}
+	}
+
+	.content { display: inline-block; width: 70%; position: relative; text-align: left;
+		p { margin-bottom: $font-size-normal; }
+		h2 { margin-bottom: 2rem; font-size: 2.8rem; color: $color-dark-blue; } 
+		.more { display: block; background: url("../img/icons/icon-dots-l.svg") no-repeat, $color-dark-blue; @include colorize(white); background-position: 15% center; padding: 1.5rem 3rem 1.5rem 6rem; display: inline-block; border-radius: $border-radius; color: $color-white; }
+	}
+
+	@media screen and (max-width: 1024px) {
+		.content { width: 65%; }
+	}
+
+	@media screen and (max-width: 768px) {
+		.content { width: 100%; }
+		background: #ededed;
+		.container::before { background: none; }
+	}
+}

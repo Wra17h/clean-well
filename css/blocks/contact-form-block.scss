@@ -1,0 +1,30 @@
+#order-form {
+	@include section(2rem);
+
+
+	h3 { @include font-normal; text-transform: uppercase; margin-bottom: 2rem; padding-left: 5rem; position: relative; }
+	h3:before { content: ""; background: url(../img/icons/icon-contact-us.png) no-repeat;  @include colorize(lightblue); width: 3.8rem; height: 38px; position: absolute; left: 0; top: -1rem;}
+
+	form { background:  url(../img/bottom-form-bg.png) center bottom no-repeat ,linear-gradient(180deg, #c3e8f6 0%, #fff 20%) ; max-width: 57.5rem; display: flex; flex-direction: column; align-items: center; padding: 3rem; border-radius: $border-radius;
+		button { color: $color-white; margin-bottom: 1rem;}
+	}
+	
+	form input[type="text"], form select, form textarea, form input[type="tel"] { width: 100%; text-align: center;border: none; box-shadow: inset 0 0 2.1rem .5rem rgba(58,168,210,0.19); border: .3rem solid transparent; color: $color-dark-gray; font-style: italic; border-radius: $border-radius;
+	}
+
+  form input[type="text"]:focus, form textarea:focus, form input[type="tel"]:focus {
+		border: .3rem solid $color-dark-blue-2; background: $color-white; box-shadow: none; color: $color-black; font-style: normal;
+	}
+
+	button { background: url(../img/icons/icon-send.png) 18% center no-repeat, $color-blue; padding: 1.7rem 3rem; padding-left: 6rem; box-shadow: 0 0 1rem -.4rem rgb(0, 0, 0); }
+
+	.bottom-form { display: flex; flex-direction: column;  }
+
+	textarea { resize: none; }
+
+	.full-form-link { color: $color-white; background: url(../img/icons/icon-contact-us-2.png) no-repeat; padding: 0.5rem 0 0.5rem 3rem; }
+
+	@media screen and (max-width: 360px) {
+		.full-form-link { font-size: 1.2rem; }
+	}
+}

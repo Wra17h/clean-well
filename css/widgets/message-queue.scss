@@ -1,0 +1,7 @@
+.message-queue {
+	position: fixed; bottom: 0; padding: 1rem; 	left:0; right:0; background: rgba(0,0,0,0.7);
+	.message { margin:0 auto; max-width: 700px; display: block; background: white; padding: 1rem; margin-bottom: 0.5rem; border-radius: 3px; box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);}
+	.message:last-child { margin-bottom: 0; }
+	.message.error { border-left: 5px solid $color-yellow; }
+	.message.warning { border-left: 5px solid $color-yellow; }
+}

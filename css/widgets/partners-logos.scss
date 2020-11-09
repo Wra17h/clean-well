@@ -1,0 +1,15 @@
+.partners-logos {
+	display: flex; grid-gap: 2rem; flex-wrap: wrap;
+	& > div {display: inline-block; max-width: 250px; position: relative; }
+	div > a { display: block; position: relative; }
+	img { height: 70px; max-width: 100%; }
+}
+
+.protection-catalog {
+	display: grid; grid-auto-rows: min-content; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	grid-gap: 2rem; max-width: 1100px; margin: 0 auto;
+	.card {
+			text-align: center;;
+			img { margin-bottom: 0.5rem; }
+	}
+}

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACsCA,AAAA,iBAAiB,CAAC;EAAE,WAAW,EAnBlB,IAAI;EAmB6B,cAAc,EAnB/C,IAAI;CAmB4D;;AAC7E,AAAA,iBAAiB,CAAC;EAAE,WAAW,EAnBlB,IAAe;EAmBkB,cAAc,EAnB/C,IAAe;CAmBiD;;AAC7E,AAAA,QAAQ,CAAC;EAAE,KAAK,EAAE,wBAAqB;EAAE,eAAe,EAAE,IAAI;CAAI",
+    "sources": [
+        "popup.scss",
+        "../_globals.scss"
+    ],
+    "names": [],
+    "file": "popup.css"
+}

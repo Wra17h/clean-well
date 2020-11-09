@@ -1,0 +1,105 @@
+﻿@import '_globals.scss';
+
+
+// UI | Icon
+// ----------------------------------------------------------------
+.ui-icon {
+	display: inline-block; content: ''; 
+	width: 1.5rem; height: 1.5rem; margin-right: 0.5rem;
+	background-position: center; background-repeat: no-repeat; background-size: contain;
+  vertical-align: middle; }
+
+
+// UI | Buttons
+// ----------------------------------------------------------------
+
+@mixin ui-button {
+	display: inline-block; display: inline-flex; align-items: center; justify-content: center; flex-wrap: nowrap; cursor: pointer;	text-decoration: none; white-space: nowrap; font-size: 1.6rem;
+	margin: 0; padding: 1.2rem 3rem; border-radius: $border-radius;
+	background: $color-blue;	color: $color-black; outline: none;
+	border: 0; position: relative;
+	transition: 0.3s all;
+	&:hover {
+		background: $color-black; color: white;
+	}
+}
+.ui-button { @include ui-button; }
+
+@mixin ui-small-button($icon, $color: $color-red) {
+	display: inline-flex; align-items: center;
+	transition: 0.3s all;
+	&:before { @include null; display: inline-block; width: 3.5rem; height: 3.5rem; background: $color; border-radius: 50%; margin-right: 0.5rem; background-position: center; background-size: 2rem auto; background-repeat: no-repeat; }
+
+	&:hover { text-decoration: underline; }
+	&:hover:before { background-color: $color-blue; }
+
+	@if $icon {
+		&:before { background-image: url($icon); }
+	}
+}
+
+@mixin ui-button-with-icon($icon) { @extend .ui-button;
+	&:before  { content: ''; display: inline-block; height: 2rem; width: 4rem; background: url($icon) center no-repeat ;}
+}
+
+@mixin ui-button-empty {
+	@extend .ui-button;
+	background: transparent; border: 2px solid $color-blue; color: $color-black;
+}
+
+.ui-button-white { @include ui-button; color: $color-black; background-color: $color-white; }
+.ui-button-black { @include ui-button; color: $color-white; background-color: $color-black; }
+
+// UI | Inputs 
+// ----------------------------------------------------------------
+input[type="button"], input[type="submit"], button { @extend .ui-button }
+
+.ui-input {
+  border: 1px solid #c4c4c4; padding: 1.2rem 2rem; font-size: $font-size-normal; border-radius: $border-radius;
+   outline: 0; color: black; overflow: hidden; background: transparent;
+	&:focus { background-color: white; color: $color-blue; border-color: $color-blue;  }
+}
+input[type="text"], input[type="checkbox"], input[type="password"], input[type="tel"], input[type="email"], select, textarea { @extend .ui-input; }
+input[type="text"]:focus, input[type="checkbox"]:focus, select:focus, textarea:focus { }
+
+textarea { min-height: 85px; }
+
+// UI | Checkboxes
+input[type="checkbox"] {
+	position: relative; width: 20px; height: 20px; margin-right: 10px; background-color: transparent;
+	&:before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 18px; height: 18px; background: white; border: 1px solid #cfc8bb; }	
+	&:checked:after { content: ''; display: block; position: absolute; top: 4px; left: 4px; width: 12px; height: 12px; background: #ac9d7d; }
+}
+
+select {
+	appearance: none; -webkit-appearance: none; -moz-appearance: none; position: relative;
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' height='10px' width='15px'%3E%3Ctext x='0' y='10' fill='gray'%3E%E2%96%BE%3C/text%3E%3C/svg%3E");
+	background-repeat: no-repeat; background-size: 1.5rem 1rem; background-position: right center; background-clip: border-box;
+	-moz-background-clip: border-box;
+	-webkit-background-clip: border-box;
+}
+
+// UI | Forms
+// ----------------------------------------------------------------
+form {
+	margin: 0 auto;
+	h2 { font-size: $font-size-large; margin-bottom: 1rem; padding: 0; }
+
+	input[type="text"], input[type="password"], textarea, input[type="tel"] { display: block; width: 100%; margin-bottom: 2rem;}
+
+	input[type="submit"], input[type="button"] { display: inline-block; }
+
+	.form-input { display: block; width: 100%; margin-bottom: 2rem;}
+	.buttons { margin-top: 1rem;}
+
+	input.error { outline: .2rem solid red; }
+	label { display: inline-block; margin-bottom: 0.5rem; font-size: 90%; opacity: 0.9; font-weight: bold;}
+	input[type="text"], select, textarea { width: 100%; }
+
+	.vcap-input { display: flex; align-items: center; align-content: center;  margin-bottom: 1rem; }
+	.vcap-input input { margin-bottom: 0; }
+	.vcap-input label { margin-bottom: 0; }
+}
+
+span { color: $color-blue; }
+

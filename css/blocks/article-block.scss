@@ -1,0 +1,49 @@
+#article {
+	@include section(2rem);
+	& > .container { padding: 0; }
+
+	img.fullwidth { width: 100%; height: auto; float: none; max-width: none; margin-left:0; margin-right: 0; }
+	img.float-left { float: left; margin-right: 2rem; max-width: 30rem; height: auto; position: relative;  }
+	img.float-right { float: right; margin-left: 2rem;  max-width: 30rem; height: auto; position: relative; }
+
+	.article { 
+		h1 { color: $color-blue; margin-bottom: $font-size-large;}
+		h2 { font-family: "Arial", "Roboto", serif; text-transform: none; }
+		p { font-size: $font-size-normal; margin-bottom: $font-size-normal; }
+		ul { overflow: hidden; margin-bottom: $font-size-large;
+			li { color: #6e7376; font-style: italic; list-style-image: url(../img/icons/icon-marker.png); margin-left: 3rem; }
+			li:not(:last-child) { margin-bottom: 1rem; }
+		}
+		ol { overflow: hidden; margin-bottom: $font-size-large;
+			li { list-style-type: decimal; margin-left: 3rem; }
+		}
+		a { text-decoration: underline; color: $color-blue; }
+		a:hover { text-decoration: none; }
+		img { border-radius: $border-radius; margin-bottom: 1rem; width: 100%; }
+		strong { display: contents; }
+	}
+
+	@media screen and (max-width: 960px) {
+		.content-wrapper .container & { padding: 0 4rem 0 1rem; }
+	}
+
+	@media screen and (max-width: 768px) {
+		.content-wrapper .container & { padding-right: 2rem; padding-left: 2rem;}
+	}
+
+	@media screen and (max-width: 360px) {
+		.content-wrapper .container & { padding-left: 0; }
+	}
+
+	padding: 0;
+
+}
+
+.page-id-7 {
+	#article {
+		p {
+			a { text-decoration: underline; color: $color-blue; }
+			a:hover { text-decoration: none; }
+		}
+	}
+}

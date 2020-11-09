@@ -1,0 +1,15 @@
+.ui-small-padding {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.ui-large-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.ui-link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+/*# sourceMappingURL=popup.css.map */

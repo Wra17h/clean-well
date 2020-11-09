@@ -1,0 +1,27 @@
+@import '../globals';
+
+@mixin popup {
+ text-align: left;
+ position: fixed; top: 50%; transform: translateY(-50%); width: 100%; width: calc(100% - 20rem); margin-left: $span-large * -1;
+ z-index: 300; display: block; vertical-align: top; opacity: 1; padding: $span-small $span-large; transition: opacity 0.5s;
+ box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+ background: linear-gradient(900deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 10rem),
+ rgba(0, 19, 40, 0.98);
+
+
+ button.close {
+	position: absolute; top: $span-small; right: $span-large; opacity: 0.8;
+	display: inline-block; width: 2rem; height: 2rem; border-radius: 50%; background: url(../img/icon-close.svg) center no-repeat; border: 0; outline: 0; cursor: pointer;
+
+	&:hover { opacity: 1; }
+ }
+
+	animation: show 0.5s;
+
+
+ form .form-input.error {
+   input[type="text"], input[type="checkbox"], select, textarea {
+    border-color: $color-red;
+  }
+ }
+}

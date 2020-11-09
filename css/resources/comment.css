@@ -1,0 +1,30 @@
+.v-comments .comment-form {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.comment-preview {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+.comment-preview .heading {
+  margin-bottom: 1rem;
+}
+
+.comment-preview .heading > * {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.comment-preview .heading .name {
+  font-weight: bold;
+}
+
+.comment-preview .heading .time {
+  opacity: 0.8;
+  font-style: italic;
+}
+/*# sourceMappingURL=comment.css.map */

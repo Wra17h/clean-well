@@ -1,0 +1,105 @@
+.adaptive-hide {
+  display: none;
+}
+
+.adaptive-show {
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  #side {
+    display: none;
+  }
+  #content {
+    background: linear-gradient(170deg, rgba(200, 200, 200, 0.5), rgba(255, 255, 255, 0) 50px), linear-gradient(-140deg, #d2e3ee, rgba(196, 213, 224, 0) 100px);
+  }
+  #article {
+    padding-left: 0;
+    padding-right: 0;
+    background: none;
+  }
+  body.page-template-1 .bottom-wrapper > .container {
+    -ms-grid-rows: (auto-fit)[3];
+        grid-template-rows: repeat(3, auto-fit);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  body.page-template-1 .bottom-wrapper #contact .contact-form {
+    max-width: none;
+  }
+  body.page-template-1 #contact {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: 2 / 1;
+  }
+  body.page-template-1 #feedbacks {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: 3 / 1;
+  }
+  #bottom-links > .container {
+    -webkit-columns: 2;
+            columns: 2;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #header > .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #header > .container > * {
+    margin: 1rem;
+  }
+  #navigation > .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-menu {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  #about img {
+    width: 200px;
+    height: 200px;
+  }
+  #services .services-container li i {
+    width: 8rem;
+    height: 8rem;
+  }
+  #services .services-container li i:before {
+    min-width: 8rem;
+  }
+  #services .services-container li i:after {
+    min-width: 8rem;
+    -webkit-mask-size: auto 5rem !important;
+            mask-size: auto 5rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #about img {
+    display: none;
+  }
+  #seo-text-1 .content {
+    width: 100%;
+  }
+  #seo-text-1 .content::after {
+    display: none;
+  }
+  #contact .contact-form {
+    max-width: none;
+  }
+  #bottom-links > .container {
+    -webkit-columns: 1;
+            columns: 1;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=adaptive.css.map */
